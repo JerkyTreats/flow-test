@@ -1,11 +1,12 @@
-import './App.css';
-import { AuthCluster } from './auth-cluster';
+import { AuthCluster } from './components/AuthCluster';
+import { Header } from './components/Header'
+import { AppContainer } from './components/Container.style'
 
 function App() {
   return (
-    <div className="test">
-      <AuthCluster />
-    </div>
+    <AppContainer>
+      <Header />
+    </AppContainer>
   );
 }
 
