@@ -9,31 +9,45 @@ export function AuthCluster() {
 
     if (user.loggedIn) {
         return (
-            <LoginDiv >
-                <span>{user?.addr ?? "No Address"}</span>
+            <AuthBox>
+                <AddressInfo> {user?.addr ?? "No Address"} </AddressInfo>
                 <LoginButton onClick={fcl.unauthenticate}>Log Out</LoginButton>
-            </LoginDiv>
+            </AuthBox>
         )
     } else {
         return (
-            <div>
+            <AuthBox>
                 <LoginButton onClick={fcl.logIn}>Log In</LoginButton>
                 <LoginButton onClick={fcl.signUp}>Sign Up</LoginButton>
-            </div>
+            </AuthBox>
         )
     }
 }
 
-export const LoginDiv = styled.div`
-    width: 200px;
-    height: 100px;
+const AuthBox = styled.div`
+    display: flex;
+    /* align-items: center; */
     background-color: darkslateblue;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    margin: 0 -5%;
+`
+
+const AddressInfo = styled.div`
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:32;
+    color: lightgrey;
 `
 
 const LoginButton = styled.button`
-    width: 60px;
-    height: 45px;
-    padding-left: 0%;
-    padding-right: 10%;
+    /* width: 75px; */
+    padding-left: 5%;
+    padding-right: 5%;
     color: grey;
+    background-color: darkgrey;
+    color: black;
+    align-content: space-between;
+    margin: 0 10px;
 `
