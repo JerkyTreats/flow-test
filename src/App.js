@@ -1,13 +1,15 @@
-import { AuthCluster } from './components/AuthCluster';
 import { Header } from './components/Header'
-import { AppContainer } from './components/Container.style'
+import { GlobalStyle } from './components/AppContainer'
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <AppContainer>
+    <React.Fragment>
+      <GlobalStyle />
       <Header />
-    </AppContainer>
+    </React.Fragment>
   );
 }
 
-export default App;
+export default App; 
