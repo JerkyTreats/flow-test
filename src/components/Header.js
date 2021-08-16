@@ -1,7 +1,5 @@
 import React from 'react'
 import { AuthCluster } from './AuthCluster'
-import { AuthClusterStyle } from "./AuthCluster.style"
-import styled from 'styled-components'
 import { Navbar, Container, Nav } from 'react-bootstrap'
 
 export const Header = () => {
