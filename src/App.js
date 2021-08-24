@@ -3,7 +3,8 @@ import { GlobalStyle } from './components/AppContainer'
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CheckAddress from './components/CheckAddress';
-import { Container } from 'react-bootstrap';
+import InitializeAccount from './components/InitializeAccount'
+import { Container, Row } from 'react-bootstrap';
 
 function App() {
   return (
@@ -12,7 +13,12 @@ function App() {
         <Header />
         <br />
         <Container>
+          <Row>
             <CheckAddress />
+          </Row>
+          <Row> 
+            < InitializeAccount />
+          </Row>
         </Container>
     </React.Fragment>
   );

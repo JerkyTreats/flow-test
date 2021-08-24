@@ -3,7 +3,6 @@ import { Container, Button } from 'react-bootstrap'
 import { isInitialized } from '../flow/is-initialized.script'
 import * as fcl from "@onflow/fcl"
 
-
 const CheckAddress = () => {
     const [user, setUser ] = useState({loggedIn: null})
     useEffect(() => fcl.currentUser().subscribe(setUser), [])
