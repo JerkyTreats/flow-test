@@ -1,26 +1,26 @@
-import { Header } from './components/Header'
-import { GlobalStyle } from './components/AppContainer'
-import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CheckAddress from './components/CheckAddress';
-import InitializeAccount from './components/InitializeAccount'
-import { Container, Row } from 'react-bootstrap';
+import React from 'react';
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router} from 'react-router-dom'
+import Routes from './components/Routes.comp'
+import { ROUTES } from './config/routes.config';
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "./components/GlobalStyles";
+import { darkTheme } from "./components/Themes"
 
 function App() {
+
   return (
-    <React.Fragment>
-      <GlobalStyle />
-        <Header />
-        <br />
-        <Container>
-          <Row>
-            <CheckAddress />
-          </Row>
-          <Row> 
-            < InitializeAccount />
-          </Row>
-        </Container>
-    </React.Fragment>
+    <ThemeProvider theme={ darkTheme }>
+      <>
+      <GlobalStyles/>
+        <Router> 
+          <Navbar />
+
+          {/* <Routes routes={ROUTES}/> */}
+        </Router>
+     </>
+    </ThemeProvider>
   );
 }
 
