@@ -13,8 +13,9 @@ First real dive into:
 ## If Feeling Cute
 
 - Complete the Tutorial
-    - Another thing completely if I understand it all 
+  - Another thing completely if I understand it all
 - Style the site into something passing for decent
 - Dockerize / Deploy React App to the internet
 - Get wild with a backend
 - Write and surface some janky smart contract
+- Pull and parse the work from [CryptoDappies](https://github.com/bebner/crypto-dappy)
