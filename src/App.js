@@ -17,7 +17,7 @@ function App() {
         <Router> 
           <Navbar />
 
-          {/* <Routes routes={ROUTES}/> */}
+          <Routes routes={ROUTES}/>
         </Router>
      </>
     </ThemeProvider>
