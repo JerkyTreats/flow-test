@@ -10,12 +10,12 @@ export default function AuthCluster() {
         return (
             <div>
                 <Badge bg="dark"> {user?.addr ?? "No Address"} </Badge>
-                <Button variant="primary" onClick={fcl.unauthenticate}>Log Out{' '}</Button>
+                <Button variant="dark" onClick={fcl.unauthenticate}>Log Out{' '}</Button>
             </div>
 )
     } else {
         return (
-            <Button onClick={fcl.logIn}>Wallet Login</Button>
+            <Button variant='dark' onClick={fcl.logIn}> Wallet Login </Button>
         )
     }
 }

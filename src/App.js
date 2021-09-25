@@ -16,7 +16,6 @@ function App() {
       <GlobalStyles/>
         <Router> 
           <Navbar />
-
           <Routes routes={ROUTES}/>
         </Router>
      </>
