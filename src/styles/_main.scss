@@ -1,17 +1,30 @@
 @import "variables";
 
-.navbar {
-  background-color: $foo;
 
-
-
-  .nav-item {
-  }
-
+.navbar-custom {
+  background-color: $nav-background;
 
   .nav-item {
     color: $paragraph;
   }
+}
+
+.navitem a:hover {
+  color: $paragraph;
+}
+
+.navitem {
+  color: $paragraph;
+  text-decoration: none;
+}
+
+a.navitem:hover {
+  color: $headline;
+}
+
+.navitem-active {
+  color: $headline;
+  text-decoration: none;
 }
 
 @import "../../node_modules/bootstrap/scss/bootstrap";

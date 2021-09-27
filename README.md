@@ -7,7 +7,7 @@ React App playing around with FCL libraries and Flow.
 First real dive into:
   
 - React
-- CSS / ~~`styled-components`~~ / `react-bootstrap`
+- ~~`styled-components`~~ / `react-bootstrap` / SASS
 - FCL / Flow blockchain
 
 ## If Feeling Cute
