@@ -8,12 +8,10 @@ import { ROUTES } from './config/routes.config';
 function App() {
 
   return (
-      <>
-        <Router> 
-          <Navbar />
-          <Routes routes={ROUTES}/>
-        </Router>
-     </>
+    <Router> 
+      <Navbar />
+      <Routes routes={ROUTES}/>
+    </Router>
   );
 }
 
