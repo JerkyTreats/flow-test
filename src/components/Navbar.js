@@ -11,9 +11,9 @@ import AuthProvider from '../providers/AuthProvider'
 
 export default function Navbar() {
   return (
-    <ReactNavbar sticky="top" bg="dark" variant='dark' >
+    <ReactNavbar sticky="top" className="navbar-bg-primary" >
       <Container>
-          <ReactNavbar.Brand color='light' href={HOME.path}> {HOME.name} </ReactNavbar.Brand>
+          <ReactNavbar.Brand  href={HOME.path}> {HOME.name} </ReactNavbar.Brand>
           <ReactNavbar.Toggle />
           <Nav>
             {NAV_ROUTES.map(item => <Nav.Link href={item.path} > {item.name} </Nav.Link>)}

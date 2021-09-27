@@ -1,0 +1,16 @@
+$background: #16161a;
+$foo: #3f3f42;
+$headline: #fffffe;
+$paragraph: #94a1b2;
+$button: #7f5af0;
+$button-alt: #2a1e50;
+$button-text: #fffffe;
+
+$body-bg: $background;
+$body-color: $paragraph;
+
+$navbar-light-brand-color:          $headline;
+$navbar-light-brand-hover-color:    $headline;
+$navbar-light-color:                rgba($headline, .55);
+$navbar-light-hover-color:          $headline; 
+$navbar-light-active-color:         $headline; 

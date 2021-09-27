@@ -1,0 +1,17 @@
+@import "variables";
+
+.navbar {
+  background-color: $foo;
+
+
+
+  .nav-item {
+  }
+
+
+  .nav-item {
+    color: $paragraph;
+  }
+}
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
