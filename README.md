@@ -19,3 +19,4 @@ First real dive into:
 - Get wild with a backend
 - Write and surface some janky smart contract
 - Pull and parse the work from [CryptoDappies](https://github.com/bebner/crypto-dappy)
+- ~~Add About Page pulling markdown from this README~~
