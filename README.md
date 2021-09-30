@@ -20,3 +20,8 @@ First real dive into:
 - Write and surface some janky smart contract
 - Pull and parse the work from [CryptoDappies](https://github.com/bebner/crypto-dappy)
 - ~~Add About Page pulling markdown from this README~~
+
+## Random Ideas that might be interesting
+
+- Access control via NFT
+- JS type game thing
