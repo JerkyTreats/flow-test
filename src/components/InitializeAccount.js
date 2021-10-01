@@ -8,10 +8,13 @@ const InitializeAccount = () => {
     const [user, setUser ] = useState({loggedIn: null})
     useEffect(() => fcl.currentUser().subscribe(setUser), [])
 
-    const fclInitializeAccount = () => {
-        initAccount().then((fclResult) => {
-            console.log(fclResult)
-        })
+    const fclInitializeAccount = async () => {
+        // For some reason user reject throws, therefore handle in try/catch
+        try {
+            const fclResult = await initAccount();
+        } catch (err) {
+            console.log(err);
+        }
     }
 
         if (user.loggedIn) {
