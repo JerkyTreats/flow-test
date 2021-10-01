@@ -1,21 +1,26 @@
-import React, {useState, useEffect} from "react"
-import * as fcl from "@onflow/fcl"
-import { Button, Badge }  from "react-bootstrap";
+import React from 'react'
+import useCurrentUser from '../hooks/use-current-user.hook'
 
-export default function AuthCluster() {
-    const [user, setUser ] = useState({loggedIn: null})
-    useEffect(() => fcl.currentUser().subscribe(setUser), [])
+const AuthContext = React.createContext()
 
-    if (user.loggedIn) {
-        return (
-            <div>
-                <Badge bg="dark"> {user?.addr ?? "No Address"} </Badge>
-                <Button variant="wallet-login" onClick={fcl.unauthenticate}>Log Out{' '}</Button>
-            </div>
-)
-    } else {
-        return (
-            <Button variant="wallet-login"  onClick={fcl.logIn}> Wallet Login </Button>
-        )
+export function useAuth() {
+    const context = React.useContext(AuthContext)
+    if (!context) {
+        throw new Error(`useAuth must be used within a AuthContext`)
     }
+    return context;
+}
+
+export function AuthProvider({ children }) {
+    const [user, loggedIn, tools] = useCurrentUser()
+
+    return (
+        <AuthContext.Provider value={{
+          user,
+          loggedIn,
+          ...tools
+        }}>
+          {children}
+        </AuthContext.Provider>
+      )
 }
