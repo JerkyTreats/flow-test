@@ -5,20 +5,21 @@ $nav-background: #3f3f42;
 .navbar-custom {
     background-color: $nav-background;
   }
-  
+
   .navitem a:hover {
     color: $paragraph;
   }
-  
+
   .navitem {
     color: $paragraph;
     text-decoration: none;
+    padding-left: 0.45em;
   }
-  
+
   a.navitem:hover {
     color: $headline;
   }
-  
+
   .navitem-active {
     color: $headline;
     text-decoration: none;

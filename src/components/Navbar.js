@@ -12,9 +12,7 @@ export default function Navbar({children}) {
       <Container>
           <ReactNavbar.Brand  href={HOME.path}> {HOME.name} </ReactNavbar.Brand>
           <ReactNavbar.Toggle />
-          <Nav>
             {NAV_ROUTES.map(route => NavItem(route))}
-          </Nav>
           <ReactNavbar.Collapse className="justify-content-end">
             {children}
           </ReactNavbar.Collapse>

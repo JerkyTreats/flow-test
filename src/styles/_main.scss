@@ -1,6 +1,13 @@
 @import "variables";
 @import "nav";
 @import "auth";
-@import "about"; 
+@import "about";
+
+.header-default {
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+}
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
