@@ -6,33 +6,29 @@ import AuthProvider from '../providers/AuthProvider'
 
 
 
-export default function Navbar() {
+export default function Navbar({children}) {
   return (
     <ReactNavbar sticky="top" className="navbar-custom" >
       <Container>
           <ReactNavbar.Brand  href={HOME.path}> {HOME.name} </ReactNavbar.Brand>
           <ReactNavbar.Toggle />
-          <Nav>
             {NAV_ROUTES.map(route => NavItem(route))}
-          </Nav>
           <ReactNavbar.Collapse className="justify-content-end">
-              <Nav>
-                  <AuthProvider />
-              </Nav>
+            {children}
           </ReactNavbar.Collapse>
       </Container>
-    </ReactNavbar>    
+    </ReactNavbar>
   )
 }
 
 const NavItem = (route) => {
   return (
-    <NavLink 
+    <NavLink
       className="navitem"
       activeClassName="navitem-active"
-      to={route.path} 
-      > 
-        {route.name} 
+      to={route.path}
+      >
+        {route.name}
     </NavLink>
   )
 }
