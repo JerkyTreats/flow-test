@@ -5,7 +5,7 @@ Pulled directly from the [OnFlow Tutorial](https://docs.onflow.org/fcl/flow-app-
 React App playing around with FCL libraries and Flow.
 
 First real dive into:
-  
+
 - React
 - ~~`styled-components`~~ / `react-bootstrap` / SASS
 - FCL / Flow blockchain
@@ -13,8 +13,12 @@ First real dive into:
 ## If Feeling Cute
 
 - Complete the Tutorial
-  - Another thing completely if I understand it all
-- Style the site into something passing for decent
+  - ~~Connect Wallet~~
+  - ~~Button to Initialize Profile~~
+  - ~~Page to Read from Profile~~
+  - Write to Profile
+  - Better Profile init/update page
+- ~~Style the site into something passing for decent~~
 - Dockerize / Deploy React App to the internet
 - Get wild with a backend
 - Write and surface some janky smart contract
