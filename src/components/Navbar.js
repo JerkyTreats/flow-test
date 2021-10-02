@@ -1,8 +1,7 @@
 import React from 'react'
 import { NavLink } from "react-router-dom"
-import { Navbar as ReactNavbar, Container, Nav } from 'react-bootstrap'
+import { Navbar as ReactNavbar, Container } from 'react-bootstrap'
 import { NAV_ROUTES, HOME } from '../config/routes.config'
-import AuthProvider from '../providers/AuthProvider'
 
 
 

@@ -1,9 +1,8 @@
 import * as fcl from "@onflow/fcl"
-import * as t from "@onflow/types"
 
 // Create a Profile and save to the Users Flow Account
 
-/* 
+/*
 account.save(<- Profile.new(), to: Profile.privatePath)
     Create & Store profile in Users Account
     https://docs.onflow.org/cadence/tutorial/02-hello-world/#accounts-and-transactions
@@ -22,15 +21,15 @@ account.link<&Profile.Base{Profile.Public}>(Profile.publicPath, target: Profile.
     Capabilities can be thought of as pointers, can be public/private
     The Profile smart contract has defined interfaces implemented by the capabilities
 
-    Good explanation here: 
+    Good explanation here:
     https://docs.onflow.org/cadence/tutorial/02-hello-world/#creating-capabilities-and-references-to-stored-resources
 
     accounts.link creates new capability
     <&Profile.Base{Profile.Public}> is the restricted reference type the capability represents
         & refers to a reference
         Profile.Base is a resource implementing Owner, Public interface
-        Profile.Public is an interface surfacing functions to get various publically available data 
-        You can look at the contract here: 
+        Profile.Public is an interface surfacing functions to get various publically available data
+        You can look at the contract here:
             https://flow-view-source.com/testnet/account/0xba1132bc08f82fe2/contract/Profile
     (Profile.publicPath, target: Profile.privatePath) is what we're linking to
         Profile.publicPath means this will be a publically available capability

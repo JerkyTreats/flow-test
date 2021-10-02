@@ -1,5 +1,4 @@
 import { query } from "@onflow/fcl"
-import * as t from "@onflow/types"
 
 const READ_PROFILE = `
 import Profile from 0xProfile

@@ -8,16 +8,20 @@ const DEFAULT_README_STATE = "**Loading...**"
 
 const Readme = () => {
     const [readme, setReadme] = useState(DEFAULT_README_STATE);
-    
-    useEffect(async () => {
-        const res = await fetch(README)
-        const data = await res.text()
-        setReadme(data)
+
+    useEffect(() => {
+
+        const setReadmeWithRetrievedData = async () => {
+            const res = await fetch(README)
+            const data = await res.text()
+            setReadme(data)
+        }
+        setReadmeWithRetrievedData()
     }, [])
-      
+
     return (
         <div>
-            <ReactMarkdown remarkPlugins={[[remarkGfm, {singleTilde: false}]]}>{ readme }</ReactMarkdown> 
+            <ReactMarkdown remarkPlugins={[[remarkGfm, {singleTilde: false}]]}>{ readme }</ReactMarkdown>
         </div>
     )
 }

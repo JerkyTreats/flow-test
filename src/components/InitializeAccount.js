@@ -12,6 +12,7 @@ const InitializeAccount = () => {
         // For some reason user reject throws, therefore handle in try/catch
         try {
             const fclResult = await initAccount();
+            console.log(fclResult)
         } catch (err) {
             console.log(err);
         }
