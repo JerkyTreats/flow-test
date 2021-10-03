@@ -20,7 +20,7 @@ const ReadProfile = () => {
     }, [auth])
 
     return (
-        <Container className="w-25 profile-body">
+        <Container className="profile-body">
             <Row>
                 {HeaderCol('Name:')}
                 <Col>{profile?.name}</Col>
@@ -43,7 +43,7 @@ const ReadProfile = () => {
 }
 
 const HeaderCol = (body) => {
-    return <Col style={{textAlign: "right"}} className="header-col">{body}</Col>
+    return <Col style={{textAlign: "center"}} className="header-col">{body}</Col>
 }
 
 export default ReadProfile
