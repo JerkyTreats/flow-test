@@ -1,23 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import { fetchProfile } from '../flow/fetch-profile'
-import { useAuth } from '../providers/AuthProvider';
 
-const ReadProfile = () => {
-    const [profile, setProfile] = useState({});
-    const auth = useAuth()
-
-    useEffect(() =>  {
-        const fetchProfileData = async () => {
-            const address = auth.user?.addr
-            if (address) {
-                const res = await fetchProfile(address)
-                console.log(res)
-                setProfile(res)
-            }
-        }
-        fetchProfileData()
-    }, [auth])
+const ReadProfile = (profile) => {
+    // const [profile, setProfile] = useState(profile);
 
     return (
         <Container className="profile-body">

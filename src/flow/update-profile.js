@@ -1,28 +1,40 @@
-import { mutate } from '@onflow/fcl'
+import * as fcl from "@onflow/fcl"
 import * as t from "@onflow/types"
+import * as _ from "lodash"
 
 const UPDATE_PROFILE = `
 import Profile from 0xProfile
 
-transaction(name: String) {
+transaction(name: String, avatar: String, color: String, info: String) {
     prepare(currentUser: AuthAccount) {
-        currentUser
+        let profileReference = currentUser
             .borrow<&{Profile.Owner}>(from: Profile.privatePath)!
-            .setName(name)
+        profileReference.setName(name)
+        profileReference.setAvatar(avatar)
+        profileReference.setColor(color)
+        profileReference.setInfo(info)
     }
 }
 `
 
-export async function updateProfile() {
-//   if (!address || !profile) {
-//     console.log('null value to update profile')
-//     return null
-//   }
+export async function updateProfile(oldProfile, newProfile) {
+  console.log('premerge' + JSON.stringify(oldProfile))
 
-  const res = await mutate({
+  const profile = _.merge({}, oldProfile, newProfile);
+
+  if (_.isEqual(oldProfile, profile)) throw Error('No change to profile');
+
+  const transactionId = await fcl.mutate({
     cadence: UPDATE_PROFILE,
-    args: (arg, t) => [arg('test', t.String)]
+    args: (arg, t) => [
+      arg(profile.name ? profile.name : '', t.String),
+      arg(profile.avatar ? profile.avatar : '', t.String),
+      arg(profile.color ? profile.color : '', t.String),
+      arg(profile.info ? profile.info : '', t.String)
+    ],
+    limit: 100
   })
-  console.log(res.decode)
-  return res
+
+  return transactionId;
+
 }
