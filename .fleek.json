@@ -2,7 +2,7 @@
     "build" : {
         "image" : "node:slim",
         "command" : "yarn install && yarn build",
-        "pubilcDir" : "public"
-
+        "pubilcDir" : "public",
+        "baseDir" : "."
     }
 }
