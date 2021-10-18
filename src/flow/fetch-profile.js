@@ -18,6 +18,5 @@ export async function fetchProfile(address) {
     cadence: READ_PROFILE,
     args: (arg, t) => [arg(address, t.Address)]
   })
-  console.log(res)
   return res
 }
