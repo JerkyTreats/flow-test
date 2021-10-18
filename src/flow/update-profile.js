@@ -1,5 +1,4 @@
 import * as fcl from "@onflow/fcl"
-import * as t from "@onflow/types"
 import * as _ from "lodash"
 
 const UPDATE_PROFILE = `
@@ -18,8 +17,6 @@ transaction(name: String, avatar: String, color: String, info: String) {
 `
 
 export async function updateProfile(oldProfile, newProfile) {
-  console.log('premerge' + JSON.stringify(oldProfile))
-
   const profile = _.merge({}, oldProfile, newProfile);
 
   if (_.isEqual(oldProfile, profile)) throw Error('No change to profile');

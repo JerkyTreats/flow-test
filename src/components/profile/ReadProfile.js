@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 
 const ReadProfile = (profile) => {
-    // const [profile, setProfile] = useState(profile);
-
     return (
         <Container className="profile-body">
             <Row>
