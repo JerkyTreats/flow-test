@@ -16,7 +16,7 @@ First real dive into:
   - ~~Connect Wallet~~
   - ~~Button to Initialize Profile~~
   - ~~Page to Read from Profile~~
-  - Write to Profile
+  - ~~Write to Profile~~
   - Better Profile init/update page
 - ~~Style the site into something passing for decent~~
 - Dockerize / Deploy React App to the internet
