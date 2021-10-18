@@ -1,5 +1,4 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import ReadProfile from '../components/profile/ReadProfile'
 import ProfileForm from '../components/profile/ProfileForm'
 import { Container, Col, Row } from 'react-bootstrap'
@@ -19,10 +18,12 @@ const Profile = () => {
             if (address) {
                 const res = await fetchProfile(address)
                 setProfileState(res)
+                return
             }
+            setProfileState(null)
         }
         fetchProfileData()
-    }, [auth, txs])
+    }, [auth.loggedIn, txs])
 
     return (
         <>
