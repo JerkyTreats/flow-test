@@ -3,11 +3,11 @@ import { Container } from 'react-bootstrap'
 import CheckAddress from '../components/CheckAddress'
 import InitializeAccount from '../components/InitializeAccount'
 
-export default function Home() {
+export default function Test() {
   return (
     <>
       <div className="header-default">
-        <h2> Home </h2>
+        <h2> Test </h2>
       </div>
 
       <Container>

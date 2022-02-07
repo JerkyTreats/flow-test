@@ -29,3 +29,4 @@ First real dive into:
 
 - Access control via NFT
 - JS type game thing
+- Bootstrap blog (Currently using Medium via [jerkytreats.dev](https://jerkytreats.dev))
