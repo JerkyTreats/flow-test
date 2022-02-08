@@ -2,7 +2,9 @@
 FROM node:14.18.0-alpine
 
 # set working directory
-# WORKDIR /app
+WORKDIR /app
+
+RUN $PWD
 
 # add `/app/node_modules/.bin` to $PATH
 ENV PATH /app/node_modules/.bin:$PATH
@@ -10,8 +12,8 @@ ENV PATH /app/node_modules/.bin:$PATH
 # install app dependencies
 COPY package.json ./
 COPY yarn.lock ./
-RUN yarn global add react-scripts@3.4.1
-RUN yarn build
+RUN yarn global add react-scripts@3.4.1 --silent
+RUN yarn install
 
 # add app
 COPY . ./
