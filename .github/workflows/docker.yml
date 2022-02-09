@@ -33,9 +33,8 @@ jobs:
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           IMAGE_TAG_SHA: ${{ github.sha }}
-          IMAGE_TAG_BRANCH: ${{ github.branch }}
         run: |
           echo $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG_SHA
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG_SHA -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG_BRANCH -t $ECR_REGISTRY/$ECR_REPOSITORY:latest .
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG_SHA -t $ECR_REGISTRY/$ECR_REPOSITORY:$GITHUB_REF_NAME -t $ECR_REGISTRY/$ECR_REPOSITORY:latest .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY --all-tags
           # echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
